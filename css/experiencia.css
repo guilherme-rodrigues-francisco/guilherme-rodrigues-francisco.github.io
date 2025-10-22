@@ -1,0 +1,118 @@
+.experiencia {
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 100px;
+}
+
+.experiencia .subtitulo {
+    color: var(--c3);
+}
+
+.experiencia-texto {
+    max-width: 40ch;
+    font-size: 1.5rem;
+    line-height: 1.33;
+    margin-bottom: 60px;
+    color: var(--c10);
+}
+
+.experiencia-texto strong {
+    color: var(--c13);
+}
+
+.empresa {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    padding: 20px;
+    background: var(--c1);
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.empresa::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -4px;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(#B6F829, #67DD0A);
+}
+
+.empresa-ano {
+    position: absolute;
+    top: 22px;
+    left: -100px;
+    width: 80px;
+    text-align: right;
+    font-size: .875rem;
+    color: var(--c10);
+}
+
+.empresa-titulo {
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.empresa-texto {
+    font-size: .875rem;
+    line-height: 1.4;
+    color: var(--c10);
+}
+
+.empresa-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.empresa-habilidades li {
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: .875rem;
+    line-height: 1.4;
+    border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+
+    .experiencia {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .experiencia .subtitulo {
+        color: var(--c13);
+    }
+
+    .experiencia-texto {
+        font-size: 1.25rem;
+    }
+
+    .empresa-ano {
+        display: block;
+        padding: 5px 10px;
+        border-radius: 4px;
+        justify-self: left;
+        width: initial;
+        position: initial;
+        text-align: start;
+        font-weight: bold;
+        order: 1;
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 400px) {
+    .empresa {
+        grid-template-columns: 1fr;
+    }
+}
